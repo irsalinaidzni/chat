@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/02199a3a80.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- <link rel="stylesheet" href="./index.css" type="css" /> -->
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="bootswatch.css" type="text/css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+</head>
+
+<body>
+  <!-- login -->
+  <div class="loginWrapper" id="loginPage">
+    <h1>Sign in to Watsab</h1>
+    <h5>Enter your email address and password</h5>
+    <form id="loginForm" action="POST">
+      <input id="emailLogin" class="input" type="text" placeholder="you@example.com" />
+      <input id="passwordLogin" class="input" type="password" placeholder="input your password" />
+    </form>
+    <a id="btnToRegister" href="" class="mt-3 mb-3">Don't have an account? Register here ...</a>
+    <button id="btnLogin" type="button" class="btn btn-success">Signin</button>
+  </div>
+  <!-- end of login -->
+
+  <!-- register -->
+  <div class="loginWrapper" id="registerPage">
+    <h1>Register Watsab</h1>
+    <h5>Enter your name, email, and password</h5>
+    <div id="registerForm">
+      <input class="input" type="text" placeholder="Name" />
+      <input class="input" type="text" placeholder="Email" />
+      <input class="input" type="password" placeholder="input your password" />
+    </div>
+    <a id="btnToLogin" href="" class="mt-3 mb-3">Have an account? Login here ...</a>
+    <button type="button" class="btn btn-success">Register</button>
+  </div>
+  <!-- end of register -->
+
+  <!-- ***** aplikasi chat ****** -->
+  <!-- The sidebar -->
+  <div id="wrapperChat">
+    <div class="sidebar">
+      <div class="m-2 mt-3">
+        <div class="d-flex justify-content-between">
+          <h4 class="profile">PROFILE ...</h4>
+          <button id="btnLogout" class="btn btn-danger">
+            <i class="fas fa-sign-out-alt btnPlus"></i>
+          </button>
+        </div>
+        <hr />
+        <div class="menu">
+          <h4 class="title">Group</h4>
+          <button id="addGroup" class="btn btn-primary">
+            <i class="fas fa-plus btnPlus"></i>
+          </button>
+        </div>
+        <div id="listGroup">
+          <p class="group">Group 1</p>
+        </div>
+        <div class="menu">
+          <h4 class="title">Friends</h4>
+          <button id="addFriend" class="btn btn-primary">
+            <i class="fas fa-plus btnPlus"></i>
+          </button>
+        </div>
+        <div id="listFriend">
+          <p class="friend">Person 1</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+      <div class="chatScreen">
+        <ul id="listmessage" class="mt-5"></ul>
+      </div>
+      <div style="width: 70%; position: absolute; bottom: 20px;">
+        <div id="inputChatWrapper">
+          <div class="formSubmitChat">
+            <button id="addFile" class="btn btn-primary">
+              <i class="fas fa-plus fa-2x"></i>
+            </button>
+            <input id="inputFile" type="file" class="btn btn-info btnAddFile" placeholder="+" />
+            <button id="cancelAddFile" class="btn btn-danger">
+              Cancel
+            </button>
+            <form id="formChat" action="post">
+              <input id="inputChat" type="text" name="inputChat" />
+            </form>
+            <button id="btnSendChat" class="btn btn-primary btnSendChat">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- *********end of aplikasi chat********* -->
+
+  <script src="main.js"></script>
+  <style>
+    /* script menghilangkan Horizontal Scroll */
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+    .paragraph {
+    width: 150%;
+    }
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+/* body {
+  height: 100vh;
+  width: 100vw;
+} */
+
+.loginWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#registerForm {
+  width: 50%
+}
+
+.input {
+  /* display: flex;
+  justify-content: center; */
+  height: 2rem;
+  width: 90%;
+  margin: 1rem;
+  padding: 1%;
+  border-radius: 5%;
+}
+
+#inputChat {
+  height: 100%;
+  width: 100%;
+  /* margin: 1rem; */
+  /* padding: 1%; */
+  /* border-radius: 5% */
+}
+
+#formChat {
+  height: 3rem;
+  width: 100%;
+  /* margin: 1rem; */
+  /* padding: 1%; */
+  /* border-radius: 5% */
+}
+
+.btnSendChat {
+  width: 15%;
+}
+
+.btnAddFile {
+  width: 10%;
+}
+
+.formSubmitChat {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 97%;
+  height: auto;
+  flex-direction: row;
+  /* This bit draws the box around it */
+  border: 1px solid grey;
+  /* I've used padding so you can see the edges of the elements. */
+  /* padding:2px; */
+  margin-left: 5rem;
+}
+
+.profile {
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+/* ------------- Sidebar and Content ---------------*/
+
+#wrapperChat {
+  width: 100vw;
+  height: 100vh;
+}
+
+.chatScreen {
+  background-color: rgb(176, 201, 223);
+  color: black;
+  height: 100vh;
+  width: 90vw;
+  padding: 10px;
+}
+
+.senderName{
+  color: blue;
+}
+
+.createdAt{
+  color: green;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 16rem;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.group {
+  color: black;
+}
+
+.friend {
+  color: black;
+}
+
+.menu {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar p.active {
+  background-color: #4f3080;
+  color: white;
+}
+/* 
+.sidebar div.active {
+  background-color: #4f3080;
+  color: white;
+} */
+
+/* Links on mouse-over */
+.sidebar p:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+/* .sidebar div:hover:not(.active) {
+  background-color: #555;
+  color: white;
+} */
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  /* width: 80%; */
+  margin-left: 15rem;
+  padding: 1px 16px;
+  /* background-color: aliceblue; */
+  /* height: 1000px; */
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+/* end of sidebar and content */
